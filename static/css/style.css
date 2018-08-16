@@ -1,3 +1,10 @@
+
+
+body * {
+    font-family: serif!important;
+    font-size:1em;
+}
+
 .blog-title {
     font-size: 1.2em;
     font-family: serif;
