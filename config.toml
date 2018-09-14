@@ -2,7 +2,7 @@
 # baseurl = "https://example.org/"
 # languageCode = "en-us"
 # title = "Hugo Stellar Theme"
-baseURL = "http://www.thereseschmutz.ch"
+baseURL = "http://www.thereseschmutz.ch/"
 languageCode = "de-ch"
 title = "Therese Schmutz – Lebensberatung – Ried"
 theme = "hugo-stellar-theme"
