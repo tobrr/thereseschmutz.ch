@@ -12,6 +12,9 @@ theme = "hugo-stellar-theme"
 googleAnalytics = "" #put your google-analytics ID here
 
 [params]
+name = "t-h@baukoma-marketimpact.ch"
+description = "Therese Schmutz – Lebensberatung – Ried"
+
   [params.header]
     title = "Therese Schmutz – Lebensberatung – Ried"
     description = '<h3 style="font-style:italic">«Wir brauchen nicht so fortzuleben, wie wir gestern gelebt haben. <br>Macht Euch nur von dieser Anschauung los und tausend Möglichkeiten laden uns<br>zu neuem Leben ein.»</h3><p>Christian Morgenstern</p>'
