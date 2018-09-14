@@ -1,0 +1,5 @@
+baseURL = "http://www.thereseschmutz.ch"
+languageCode = "en-us"
+title = "Therese Schmutz"
+theme = "hugoscroll"
+

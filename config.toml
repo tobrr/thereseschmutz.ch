@@ -1,5 +1,183 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "therese schmutz"
-theme = "hugoscroll"
+# Site settings
+# baseurl = "https://example.org/"
+# languageCode = "en-us"
+# title = "Hugo Stellar Theme"
+baseURL = "http://www.thereseschmutz.ch"
+languageCode = "de-ch"
+title = "Therese Schmutz – Lebensberatung – Ried"
+theme = "hugo-stellar-theme"
+# theme = "hugoscroll"
 
+
+googleAnalytics = "" #put your google-analytics ID here
+
+[params]
+  [params.header]
+    title = "Therese Schmutz – Lebensberatung – Ried"
+    description = '<h3 style="font-style:italic">"Wir brauchen nicht so fortzuleben, wie wir gestern gelebt haben.<br>Macht Euch nur von dieser Anschauung los und tausend Möglichkeiten laden uns<br>zu neuem Leben ein."</h3><p>Christian Morgenstern</p>'
+    # image = "images/logo.svg"
+
+  [[params.navigation]]
+    name = "Herzlich Willkommen"
+    href = "#intro"
+
+  [[params.navigation]]
+    name = "Meine Arbeitsweise"
+    href = "#arbeit"
+
+  [[params.navigation]]
+    name = "Zu meiner Person"
+    href = "#person"
+
+  [[params.navigation]]
+    name = "Beratung"
+    href = "#beratung"
+    
+  [[params.navigation]]
+    name = "Kontakt"
+    href = "#footer"
+
+  [params.intro]
+    title = "Herzlich Willkommen"
+    description = "In meinem geschützten, wohlig warm eingerichteten Praxisraum unterstütze ich Sie gerne mit verständnisvollem Zuhören, klärenden Gesprächen, verbunden mit verschiedenen Konzepten.<br>Wagen Sie den ersten Schritt und vereinbaren Sie einen Termin mit mir, ich freue mich auf Sie."
+    # image = "images/pic01.jpg"
+    # [[params.intro.action]]
+    #   buttontext = "Learn More"
+    #   href = "generic.html"
+
+
+  [[params.section]]
+    id = "arbeit"
+    title = "Meine Arbeitsweise"
+    description = "Ich arbeite lösungsorientiert: mit verständnisvollem Zuhören und mit verschiedenen Konzepten, die helfen, eine Lösung für Ihr Problem zu finden; immer darauf bedacht, dass die Lösung im Klienten entstehen kann.<br>Mit den Farbkombinationen von Aura Soma, verbunden mit der Numerologie, erhalten Sie Wege aufgezeigt, die mehr Klarheit und Lebensfreude in Ihr Leben bringen können."
+    
+      [params.section.content]
+      enable = false
+      text = "Ich arbeite lösungsorientiert: mit verständnisvollem Zuhören und mit verschiedenen Konzepten, die helfen, eine Lösung für Ihr Problem zu finden; immer darauf bedacht, dass die Lösung im Klienten entstehen kann.<br>Mit den Farbkombinationen von Aura Soma, verbunden mit der Numerologie, erhalten Sie Wege aufgezeigt, die mehr Klarheit und Lebensfreude in Ihr Leben bringen können."
+
+    
+    
+    # the picture is storead at static/images/
+    [params.section.features]
+      enable = false
+      [[params.section.feature]]
+        title = "Ipsum consequat"
+        description = "Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat."
+        icon = "fa-code"
+
+      [[params.section.feature]]
+        title = "Amed sed feugiat"
+        description = "Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat."
+        icon = "fa-copy"
+
+      [[params.section.feature]]
+        title = "Ipsum consequat"
+        description = "Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat."
+        icon = "fa-diamond"
+    [params.section.footer]
+      enable = false
+      [[params.section.footer.action]]
+        buttontext = "Learn More"
+        buttonUrl = "generic.html"
+
+  [[params.section]]
+    id = "person"
+    title = "Zu meiner Person"
+    description = "<p>Geboren 1949</p><p>Berufliche Grundausbildung<br />Hausfrau, Mutter von drei S&ouml;hnen<br />Mithilfe in der eigenen Firma: B&uuml;ro, Verkauf, Personalbetreuung, Kundenpflege</p><p>April 1999 &ndash; Juni 2000: Grundausbildung und Weiterbildungen in Lebensberatung bei&nbsp;<br />Brigitte Eugster, Zollikerberg, Z&uuml;rich</p><p>2004: Ausbildung zur Aura Soma Beraterin Level 1/2/3 bei Margrit Wacker, Zofingen</p><p>Diverse Weiterbildungen und Seminare<br />Meine beste lehrmeisterin - das Leben und die Natur</p>"
+
+    [params.section.statistics]
+      enable = false
+      [[params.section.statistic]]
+        icon = "fa-code-fork"
+        value = "5,120"
+        text = "Etiam"
+      [[params.section.statistic]]
+        icon = "fa-folder-open-o"
+        value = "8,192"
+        text = "Magna"
+      [[params.section.statistic]]
+        icon = "fa-signal"
+        value = "2,048"
+        text = "Tempus"
+      [[params.section.statistic]]
+        icon = "fa-laptop"
+        value = "4,096"
+        text = "Aliquam"
+      [[params.section.statistic]]
+        icon = "fa-diamond"
+        value = "1,024"
+        text = "Nullam"
+
+    [params.section.content]
+      enable = false
+      text = "Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia."
+
+    [params.section.footer]
+      enable = false
+      [[params.section.footer.action]]
+        buttontext = "Learn More"
+        buttonUrl = "generic.html"
+
+
+  [[params.section]]
+    id = "beratung"
+    title = "Beratung"
+    description = "<p>Sie basiert auf einer seri&ouml;sen Fachausbildung und einer zehnj&auml;hrigen Erfahrung in Begleitung von Frauen, M&auml;nnern und Kindern jeden Alters.</p><p>Ich berate auch Paare, welche es werden &ndash; sind &ndash; bleiben wollen oder sich trennen m&ouml;chten.</p><p>Ich arbeite pragmatisch und spreche die einfache Sprache. Im Moment einer Sitzung ist f&uuml;r mich der Klient der zentrale Mittelpunkt und bekommt meine ganze Aufmerksamkeit.</p>"
+    [params.section.footer]
+      enable = false
+      [[params.section.footer.action]]
+        buttontext = "Get Started"
+        buttonUrl = "generic.html"
+        customClass = "special"
+      [[params.section.footer.action]]
+        buttontext = "Learn More"
+        buttonUrl = "generic.html"
+
+  [params.footer]
+    enable = true
+    title = "Kontakt"
+    description = "Therese Schmutz<br>Lebensberaterin<br>Aura Soma Therapeutin"
+
+    second_title = ""
+    address = "Rebacher 21 &bull; 3216 Ried"
+    phone = "(+41) 031 755 40 04"
+    mobile = "(+41) 079 659 96 32"
+    email = "info@thereseschmutz.ch"
+
+    # [[params.footer.action]]
+    #   href = "generic.html"
+    #   buttontext = "Learn More"
+
+    # social icons
+    [params.footer.social_list]
+      enable = false
+
+      [[params.footer.social]]
+        title = "Twitter"
+        icon = "fa-twitter"
+        link = "#"
+
+      [[params.footer.social]]
+        title = "Facebook"
+        icon = "fa-facebook"
+        link = "#"
+
+      [[params.footer.social]]
+        title = "Instagramm"
+        icon = "fa-instagram"
+        link = "#"
+
+      [[params.footer.social]]
+        title = "Dribbble"
+        icon = "fa-dribbble"
+        link = "#"
+
+      [[params.footer.social]]
+        title = "Email"
+        icon = "fa-envelope"
+        link = "#"
+
+    # copyright
+    [params.footer.copyright]
+      enable = true
+      text = "© Therese Schmutz, Design: [HTML5UP](//html5up.net)"

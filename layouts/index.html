@@ -1,39 +1,114 @@
-{{ partial "header.html" . }}
-<body class="home-template">
+<!DOCTYPE HTML>
+{{ "<!--" | safeHTML}}
+  Stellar by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+{{ "-->" | safeHTML }}
+<html>
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
 
-    <!-- The big featured header on the homepage, with the site logo and description -->
-    <header id="site-head" {{ if .Site.Params.cover }}style="background-image: url({{ .Site.Params.cover }})"{{ end }}>
-        <div class="vertical">
-            <div id="site-head-content" class="inner">
+    <!-- Wrapper -->
+      <div id="wrapper">
+          {{ .Data.Posts }}
 
-                {{ if .Site.Params.logo }} <a id="blog-logo" href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logo }}" alt="Blog Logo" /></a>{{ end }}
-                <h1 class="blog-title">{{ .Site.Title}}</h1>
-                {{ if .Site.Params.description }}<h2 class="blog-description">{{ .Site.Params.description }}</h2> {{ else  }}
-                <!-- h2 class="blog-description">Power puff girls</h2 -->
-                {{ end }}
+        <!-- Header -->
+          {{ partial "header.html" . }}
 
-                <!-- a class='btn first'>Take a tour</a>
-                <a class='btn last'>Cut to the chase</a><br -->
-                <i id='header-arrow' class="fa fa-angle-down"></i>
-            </div>
-        </div>
+        <!-- Nav -->
+          {{ partial "navigation.html" . }}
 
-    </header>
+        <!-- Main -->
+          <div id="main">
 
-    <main class="content" role="main">
-    <div class='fixed-nav'>
-    </div>
-        {{ range .Data.Pages.ByWeight }}
-                {{ if eq .Type  "post" }}
-                    {{ .Render "post"}}
-                {{ end }}
-        {{ end }}
+            <!-- Introduction -->
+              <!--{{ partial "intro.html" . }}-->
+              <section id="intro" class="main special">
+                <div class="spotlight">
+                  <div class="content">
+                    <header class="major">
+                      <h2>{{ .Site.Params.intro.title }}</h2>
+                    <p>{{ .Site.Params.intro.description | markdownify }}</p>
+                    </header>
+                    <ul class="actions">
+                      {{range $button := .Site.Params.intro.action }}
+                        <li>
+                          <a href="{{ $button.href }}" class="button {{ $button.customClass }}">{{ $button.buttontext }}</a>
+                        </li>
+                      {{ end }}
+                    </ul>
+                  </div>
+                  {{ if .Site.Params.intro.image }}
+                    <span class="image"><img src="{{ .Site.Params.intro.image }}" alt="" /></span>
+                  {{ end }}
+                </div>
+              </section>
 
-</main>
-    {{ partial "footer.html" .}}
+            <!-- Sections -->
+              {{ $list := .Site.Params.section }}
+              {{ range $index, $section := $list }}
+                <section id="{{$section.id}}" class="main ">
+                  <header class="major">
+                    <h2>{{ $section.title }}</h2>
+                  </header>
+                    <p>{{ $section.description | markdownify }}</p>
+                  
+                  <!-- section features -->
+                  {{ if $section.features.enable }}
+                    <ul class="features">
+                      {{ range $count, $feature := $section.feature }}
+                      <li>
+                        <span class="icon major style{{ add $count 1 }} {{ $feature.icon }}"></span>
+                        <h3>{{ $feature.title }} </h3>
+                        <p>{{ $feature.description | markdownify }}</p>
+                      </li>
+                      {{end}}
+                    </ul>
+                  {{ end }}
 
-    {{ partial "script.html" .}}
+                  <!-- section statistics -->
+                  {{ if $section.statistics.enable }}
+                    <ul class="statistics">
+                      {{ range $count, $stat := $section.statistic }}
+                        <li class="style{{add $count 1}}">
+                          <span class="icon {{ $stat.icon }} "></span>
+                          <strong>{{ $stat.value }}</strong> {{ $stat.text }}
+                        </li>
+                      {{ end }}
+                    </ul>
+                  {{ end }}
 
+                  <!-- section content -->
+                  {{ if $section.content.enable }}
+                    <p class="content">{{ $section.content.text }}</p>
+                  {{ end }}
+                  
+                  <!-- section footer/cta -->
+                  {{ if $section.footer.enable }}
+                    <footer class="major">
+                      <ul class="actions">
+                        {{range $button := $section.footer.action }}
+                          <li>
+                            <a href="{{ $button.buttonUrl }}" class="button {{ $button.customClass }}">{{ $button.buttontext }}</a>
+                          </li>
+                        {{ end }}
+                      </ul>
+                    </footer>
+                  {{end}}
+                </section>
+              {{ end }}
+          
+          </div>
 
-</body>
+        <!-- Footer -->
+          {{ partial "footer.html" . }}
+
+      </div>
+
+    <!-- Scripts -->
+      {{ partial "scripts.html" . }}
+      {{- partial "footer_custom.html" . }}
+  </body>
 </html>
