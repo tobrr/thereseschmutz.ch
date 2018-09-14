@@ -14,7 +14,7 @@ googleAnalytics = "" #put your google-analytics ID here
 [params]
   [params.header]
     title = "Therese Schmutz – Lebensberatung – Ried"
-    description = '<h3 style="font-style:italic">"Wir brauchen nicht so fortzuleben, wie wir gestern gelebt haben.<br>Macht Euch nur von dieser Anschauung los und tausend Möglichkeiten laden uns<br>zu neuem Leben ein."</h3><p>Christian Morgenstern</p>'
+    description = '<h3 style="font-style:italic">«Wir brauchen nicht so fortzuleben, wie wir gestern gelebt haben. <br>Macht Euch nur von dieser Anschauung los und tausend Möglichkeiten laden uns<br>zu neuem Leben ein.»</h3><p>Christian Morgenstern</p>'
     # image = "images/logo.svg"
 
   [[params.navigation]]
@@ -83,7 +83,7 @@ googleAnalytics = "" #put your google-analytics ID here
   [[params.section]]
     id = "person"
     title = "Zu meiner Person"
-    description = "<p>Geboren 1949</p><p>Berufliche Grundausbildung<br />Hausfrau, Mutter von drei S&ouml;hnen<br />Mithilfe in der eigenen Firma: B&uuml;ro, Verkauf, Personalbetreuung, Kundenpflege</p><p>April 1999 &ndash; Juni 2000: Grundausbildung und Weiterbildungen in Lebensberatung bei&nbsp;<br />Brigitte Eugster, Zollikerberg, Z&uuml;rich</p><p>2004: Ausbildung zur Aura Soma Beraterin Level 1/2/3 bei Margrit Wacker, Zofingen</p><p>Diverse Weiterbildungen und Seminare<br />Meine beste lehrmeisterin - das Leben und die Natur</p>"
+    description = "<p>Geboren 1949</p><p>Berufliche Grundausbildung<br />Hausfrau, Mutter von drei S&ouml;hnen<br />Mithilfe in der eigenen Firma: B&uuml;ro, Verkauf, Personalbetreuung, Kundenpflege</p><p>April 1999 &ndash; Juni 2000: Grundausbildung und Weiterbildungen in Lebensberatung bei&nbsp;<br />Brigitte Eugster, Zollikerberg, Z&uuml;rich</p><p>2004: Ausbildung zur Aura Soma Beraterin Level 1/2/3 bei Margrit Wacker, Zofingen</p><p>Diverse Weiterbildungen und Seminare<br />Meine beste lehrmeisterin – das Leben und die Natur</p>"
 
     [params.section.statistics]
       enable = false
