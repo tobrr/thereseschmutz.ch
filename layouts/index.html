@@ -7,6 +7,8 @@
 <html>
   <head>
     {{ partial "head.html" . }}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/slick.css" />
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css" />
   </head>
   <body>
 
@@ -16,6 +18,9 @@
 
         <!-- Header -->
           {{ partial "header.html" . }}
+
+        <!-- Fader -->
+          {{ partial "fader.html" . }}
 
         <!-- Nav -->
           {{ partial "navigation.html" . }}
@@ -53,6 +58,15 @@
                   <header class="major">
                     <h2>{{ $section.title }}</h2>
                   </header>
+                  
+                       <!-- section image -->
+                   {{ if $section.image.enable }}
+                   <div class="section-image">
+                     <img src="{{ .Site.BaseURL }}{{ $section.image.image }}">
+                   </div>
+                  {{ end }}
+                  
+                  
                     <p>{{ $section.description | markdownify }}</p>
                   
                   <!-- section features -->
@@ -85,6 +99,8 @@
                     <p class="content">{{ $section.content.text }}</p>
                   {{ end }}
                   
+              
+                  
                   <!-- section footer/cta -->
                   {{ if $section.footer.enable }}
                     <footer class="major">
@@ -109,6 +125,28 @@
 
     <!-- Scripts -->
       {{ partial "scripts.html" . }}
+      
+      <script src="{{ .Site.BaseURL }}js/slick.min.js"></script>
+      
+      <script type="text/javascript">
+        $('.fader').slick({
+          accessibility: false,
+          autoplay: true,
+          autoplaySpeed: 0,
+          cssEase: 'linear',
+          pauseOnFocus: false,
+          pauseOnHover: false,
+          draggable: false,
+          dots: false,
+          fade: true,
+          speed: 30000,
+          swipe: false,
+          useCSS: false,
+          prevArrow: false,
+          nextArrow: false,
+          infinite: true
+        });
+      </script>
       {{ partial "footer_custom.html" . }}
   </body>
 </html>
