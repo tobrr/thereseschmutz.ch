@@ -89,7 +89,9 @@ description = "Therese Schmutz – Lebensberatung – Ried"
     description = "<p>Geboren 1949</p><p>Berufliche Grundausbildung<br />Hausfrau, Mutter von drei S&ouml;hnen<br />Mithilfe in der eigenen Firma: B&uuml;ro, Verkauf, Personalbetreuung, Kundenpflege</p><p>April 1999 &ndash; Juni 2000: Grundausbildung und Weiterbildungen in Lebensberatung bei&nbsp;<br />Brigitte Eugster, Zollikerberg, Z&uuml;rich</p><p>2004: Ausbildung zur Aura Soma Beraterin Level 1/2/3 bei Margrit Wacker, Zofingen</p><p>Diverse Weiterbildungen und Seminare<br />Meine beste Lehrmeisterin – das Leben und die Natur</p>"
     [params.section.image]
       enable = true
-      image = "img/1_therese_schmutz_res_900.jpg"
+      image = "img/portrait/1_therese_schmutz.jpg"
+      image2 = "img/portrait/2_therese_schmutz.jpg"
+      image3 = "img/portrait/3_therese_schmutz.jpg"
 
     [params.section.statistics]
       enable = false

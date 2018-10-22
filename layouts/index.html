@@ -46,7 +46,9 @@
                     </ul>
                   </div>
                   {{ if .Site.Params.intro.image }}
-                    <span class="image"><img src="{{ .Site.Params.intro.image }}" alt="" /></span>
+                    <span class="image">
+                      <img src="{{ .Site.Params.intro.image }}" alt="" />
+                    </span>
                   {{ end }}
                 </div>
               </section>
@@ -55,17 +57,20 @@
               {{ $list := .Site.Params.section }}
               {{ range $index, $section := $list }}
                 <section id="{{$section.id}}" class="main ">
+                      <!-- section image -->
+                   {{ if $section.image.enable }}
+                   <div class="section-image">
+                     <img src="{{ .Site.BaseURL }}{{ $section.image.image }}" />
+                     <img src="{{ .Site.BaseURL }}{{ $section.image.image2 }}" />
+                     <img src="{{ .Site.BaseURL }}{{ $section.image.image3 }}" />
+                   </div>
+                  {{ end }}
+                  
                   <header class="major">
                     <h2>{{ $section.title }}</h2>
                   </header>
                   
-                       <!-- section image -->
-                   {{ if $section.image.enable }}
-                   <div class="section-image">
-                     <img src="{{ .Site.BaseURL }}{{ $section.image.image }}">
-                   </div>
-                  {{ end }}
-                  
+                   
                   
                     <p>{{ $section.description | markdownify }}</p>
                   
